@@ -5,12 +5,15 @@ Subways is a python module that's provide some basic utilities like
 Factory objects, Process management based on subprocess module,
 some class to manipulate dictionaries and more.
 
+
 Warnning
 """"""""
 Only Python version 3.4+ are supported !
 
+
 Install
 -------
+
 
 Pypi:
 '''''
@@ -23,6 +26,7 @@ or as non root user
 .. code:: shell
 
   $ pip install --user subways
+
 
 Git:
 ''''

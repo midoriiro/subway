@@ -18,7 +18,7 @@ class CleanCommand(clean):
 
 setup(
     name='subways',
-    version='0.1.0.dev5',
+    version='0.1.0.dev7',
     packages=find_packages(),
     url='https://github.com/midoriiro/subways/',
     license=open('LICENSE').read(),

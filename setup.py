@@ -1,22 +1,38 @@
-from setuptools import setup
+import shutil
+import os
 
-import subways
+from distutils.command.clean import clean
+from setuptools import setup, find_packages
+
+
+class CleanCommand(clean):
+    """Post-installation for installation mode."""
+    def run(self):
+        path = os.path.dirname(__file__)
+        shutil.rmtree(os.path.join(path, 'dist'), ignore_errors=True)
+        shutil.rmtree(os.path.join(path, 'build'), ignore_errors=True)
+        shutil.rmtree(
+            os.path.join(path, 'subways.egg-info'), ignore_errors=True
+        )
 
 
 setup(
     name='subways',
-    version=subways.__version__,
-    packages=['subways'],
+    version='0.1.0.dev5',
+    packages=find_packages(),
     url='https://github.com/midoriiro/subways/',
     license=open('LICENSE').read(),
     author='midoriiro',
     author_email='contact@smartsoftwa.re',
     maintainer='midoriiro',
     maintainer_email='contact@smartsoftwa.re',
-    description=subways.__doc__,
+    description='A Python module that’s provide some basic utilities.',
     long_description=open('README.rst').read(),
     tests_require=['tox'],
     install_requires=[],
+    cmdclass={
+        'clean': CleanCommand,
+    },
     classifiers=[
         'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',

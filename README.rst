@@ -1,7 +1,9 @@
 Subways
 =======
 
-Subways is a python module that's provide some basic utilities like Factory objects, Process management based on subprocess module, some class to manipulate dictionaries and more.
+Subways is a python module that's provide some basic utilities like
+Factory objects, Process management based on subprocess module,
+some class to manipulate dictionaries and more.
 
 Warnning
 """"""""
@@ -14,14 +16,14 @@ Pypi:
 '''''
 .. code:: shell
 
-  # pip install subways      
-    
+  # pip install subways
+
 or as non root user
-    
+
 .. code:: shell
 
   $ pip install --user subways
-  
+
 Git:
 ''''
 .. code:: shell

@@ -1,17 +1,12 @@
-from setuptools import setup, find_packages
-
-import os
+from setuptools import setup
 
 import subways
 
 
-def get_readme():
-    return open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
-
 setup(
     name='subways',
     version=subways.__version__,
-    packages=find_packages(),
+    packages=['subways'],
     url='https://github.com/midoriiro/subways/',
     license=open('LICENSE').read(),
     author='midoriiro',
@@ -19,7 +14,7 @@ setup(
     maintainer='midoriiro',
     maintainer_email='contact@smartsoftwa.re',
     description=subways.__doc__,
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     tests_require=['tox'],
     install_requires=[],
     classifiers=[

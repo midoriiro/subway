@@ -1,12 +1,12 @@
 from distutils.core import setup
 
 
-import subway
+import subways
 
 setup(
     name='subway',
-    version=subway.__version__,
-    packages=['subway'],
+    version=subways.__version__,
+    packages=['subways'],
     url='',
     license='',
     author='midoriiro',

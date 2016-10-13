@@ -1,14 +1,13 @@
 # TODO: write module, function, class, method docstring
 # pylint: disable=missing-docstring
 
-import os
 import shlex
 import pytest
 
 from pytest_bdd import parsers, scenario, given, when, then
 
-from subway import process as _process
-from subway.process import Process
+from subways import process as _process
+from subways.process import Process
 
 from tests.conftest import get_data_path
 

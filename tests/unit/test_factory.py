@@ -1,6 +1,6 @@
 import pytest
 
-from subway.factory import Factory
+from subways.factory import Factory
 
 
 class A:

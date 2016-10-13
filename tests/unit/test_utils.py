@@ -1,6 +1,6 @@
 import pytest
 
-from subway.utils import PartialDictComparer, AttributeDict
+from subways.utils import PartialDictComparer, AttributeDict
 
 
 class A:

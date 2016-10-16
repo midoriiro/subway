@@ -9,26 +9,57 @@
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
 
-# TODO: write module, function, class, method docstring
-# pylint: disable=missing-docstring
+'''
+    Factory is a module to create, clone, copy or deepcopy a object.
+'''
 
 import copy
 
 
 class Factory:
+    '''
+        Factoryze object.
+    '''
+
     @staticmethod
     def create(template, **kwargs):
+        '''
+            Create an instance object.
+
+            :param template: The class non instancied
+            :param **kwargs: A dictionary of attributes class
+            :return: Return a created instance object
+        '''
+
         return template(**kwargs)
 
     @staticmethod
     def clone(obj):
+        '''
+            Clone an instance object.
+
+            :param: obj: An instance of object
+            :return: Return a cloned object
+        '''
         clone = obj
         return clone
 
     @staticmethod
     def copy(obj):
+        '''
+            Copy an instance object.
+
+            :param: obj: An instance of object
+            :return: Return a copy of the object.
+        '''
         return copy.copy(obj)
 
     @staticmethod
     def deepcopy(obj):
+        '''
+            Deep copy an instance object.
+
+            :param: obj: An instance of object
+            :return: Return a deep copy of the object
+        '''
         return copy.deepcopy(obj)
